@@ -9,10 +9,10 @@ static func beautify_json(json, spaces = 0):
 	if not error_message.empty():
 		return error_message
 	
-	# Remove any existing formating
-	json.erase(" ", 0)
-	json.erase("\n", 0)
-	json.erase("\t", 0)
+	# Remove pre-existing formating
+	json = json.replace(" ", "")
+	json = json.replace("\n", "")
+	json = json.replace("\t", "")
 	
 	json = json.replace("{", "{\n")
 	json = json.replace("}", "\n}")
