@@ -24,7 +24,7 @@
 extends Node
 
 # Takes valid JSON (if invalid, it will return a error according with Godot's
-# 'validade_json' method) and a number of spaces for indentation (Default is
+# 'validade_json' method) and a number of spaces for indentation (default is
 # '0', in which it will use tabs instead)
 static func beautify_json(json, spaces = 0):
 	var error_message = validate_json(json)
